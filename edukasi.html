@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#faf8f4" />
+    <meta
+      name="description"
+      content="Pakem Arsitektur & Edukasi: pelajari anatomi 2D Tri Angga, enam modul tata ruang arsitektur Bali, tanya jawab terkurasi, dan rujukan resmi."
+    />
+    <title>Pakem Arsitektur &amp; Edukasi | Hasta</title>
+    <link rel="icon" type="image/png" href="./assets/favicon.png" />
+
+    <link rel="stylesheet" href="./styles/tokens.css" />
+    <link rel="stylesheet" href="./styles/base.css" />
+    <link rel="stylesheet" href="./styles/components.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#utama">Lewati ke konten</a>
+
+    <div class="site-header-backdrop" aria-hidden="true"></div>
+
+    <header class="site-header" id="site-header">
+      <div class="header-inner">
+        <a class="wordmark" href="./index.html" aria-label="Hasta, beranda">hasta</a>
+
+        <nav id="navigation" aria-label="Navigasi utama">
+          <a href="./index.html">Beranda</a>
+          <a href="./tata-ruang.html">Tata ruang</a>
+          <a href="./ukuran.html">Ukuran</a>
+          <a href="./edukasi.html" aria-current="page">Edukasi</a>
+        </nav>
+
+        <div class="header-right">
+          <button
+            class="menu-button"
+            id="menu-button"
+            aria-expanded="false"
+            aria-controls="navigation"
+            hidden
+          >
+            Menu
+          </button>
+          <a class="button primary header-cta" href="./tata-ruang.html">
+            Buka tata ruang <span aria-hidden="true">&#x2197;</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="utama">
+      
+      <section class="section-shell page-intro-header">
+        <div class="page-intro-content">
+          <h1>
+            <span>Bangunan yang bernapas</span>
+            <span>seperti tubuh manusia.</span>
+          </h1>
+          <p class="page-intro-lead">
+            Selain pembagian zona tapak di atas tanah, bangunan tradisional Bali
+            dipandang sebagai kesatuan organik. Konsep <strong>Tri Angga</strong>
+            menyelaraskan atap, tiang saka, dan pondasi bebaturan dengan
+            anatomi kepala, badan, dan kaki manusia.
+          </p>
+        </div>
+      </section>
+
+      
+      <section
+        id="tri-angga"
+        class="section-shell education-section"
+        aria-labelledby="tri-angga-title"
+      >
+        <div class="workflow-header reveal-up">
+          <div>
+            <h2 id="tri-angga-title">Anatomi 2D Tri Angga pada Bale Bali.</h2>
+          </div>
+          <p>
+            Pilih salah satu tingkatan di bawah untuk menyorot bagian struktur
+            bangunan dan analoginya dengan tubuh manusia.
+            <a class="citation" href="#ref-b05">[B-05]</a>
+            <a class="citation" href="#ref-b06">[B-06]</a>
+            <a class="citation" href="#ref-b07">[B-07]</a>
+          </p>
+        </div>
+
+        <div class="tri-angga-showcase reveal-up">
+          <div class="tri-angga-controls">
+            <h3>Tiga Lapisan Konstruksi</h3>
+            <p data-enhance hidden>
+              Klik tombol di bawah untuk melihat fokus per lapis:
+            </p>
+            <div
+              class="tri-angga-btn-stack"
+              role="group"
+              aria-label="Pilih bagian Tri Angga"
+              aria-controls="tri-angga-diagram"
+              data-enhance hidden
+            >
+              <button
+                type="button"
+                class="tri-angga-btn"
+                data-angga-target="all"
+                aria-pressed="true"
+              >
+                <strong>Tampilkan Utuh (3 Bagian)</strong>
+                <span>Atap, badan, dan dasar bangunan</span>
+              </button>
+              <button
+                type="button"
+                class="tri-angga-btn"
+                data-angga-target="utama"
+                aria-pressed="false"
+              >
+                <strong>1. Utama Angga · Kepala (Atap / Raab)</strong>
+                <span>Atap bangunan</span>
+              </button>
+              <button
+                type="button"
+                class="tri-angga-btn"
+                data-angga-target="madya"
+                aria-pressed="false"
+              >
+                <strong>2. Madya Angga · Badan (Saka &amp; Ruang)</strong>
+                <span>Tiang dan ruang bangunan</span>
+              </button>
+              <button
+                type="button"
+                class="tri-angga-btn"
+                data-angga-target="nista"
+                aria-pressed="false"
+              >
+                <strong>3. Nista Angga · Kaki (Bebaturan &amp; Sendi)</strong>
+                <span>Bebaturan atau dasar bangunan</span>
+              </button>
+            </div>
+          </div>
+
+          <figure class="tri-angga-diagram-frame">
+            <svg id="tri-angga-diagram" data-angga="all" viewBox="0 0 1200 896" role="img" aria-labelledby="tri-diagram-title">
+              <title id="tri-diagram-title">Tri Angga: atap, badan, dan dasar bangunan</title>
+              <image href="./assets/images/tri-angga-anatomi.webp" width="1200" height="896" />
+              <g class="tri-highlight" fill="none" stroke="#9e4228" stroke-width="7" stroke-linejoin="round" aria-hidden="true">
+                <path data-part="utama" d="M278 323 L585 135 L600 79 L618 136 L934 323 L905 355 L306 355 Z" />
+                <path data-part="madya" d="M305 430 L354 389 L865 389 L913 430 L892 443 L872 424 L872 604 L350 604 L350 424 L319 443 Z" />
+                <path data-part="nista" d="M354 633 L858 633 L858 708 L904 708 L910 784 L308 784 L315 708 L354 708 Z" />
+              </g>
+            </svg>
+            <figcaption id="tri-angga-status" aria-live="polite">Tampilkan utuh: atap, badan, dan dasar bangunan.</figcaption>
+          </figure>
+        </div>
+
+        
+        <div id="modul-edukasi" class="edu-modules-wrap reveal-up">
+          <div class="workflow-header">
+            <div>
+              <h2>Enam modul khazanah arsitektur Bali.</h2>
+            </div>
+            <p>
+              Setiap modul disusun berdasarkan rujukan resmi dan jurnal
+              akademik untuk menjelaskan prinsip budaya di balik
+              tata ruang.
+            </p>
+          </div>
+
+          <div class="edu-modules-grid">
+            <article class="edu-module-card">
+              <span class="edu-module-num">Modul 01</span>
+              <h3>Tri Mandala &amp; Sanga Mandala</h3>
+              <p>
+                <strong>Tri Mandala</strong> membagi ruang ke dalam tiga derajat
+                kesakralan: <em>Utama</em> (hulu/suci), <em>Madya</em> (tengah/kehidupan
+                sehari-hari), dan <em>Nista</em> (hilir/pelayanan). Saat
+                diterapkan secara menyilang pada sumbu Kaja–Kelod dan
+                Kangin–Kauh, lahirlah <strong>Sanga Mandala</strong> (9 zona).
+              </p>
+              <a class="citation" href="#ref-b01">[B-01]</a>
+              <a class="citation" href="#ref-b06">[B-06]</a>
+            </article>
+
+            <article class="edu-module-card">
+              <span class="edu-module-num">Modul 02</span>
+              <h3>Tri Hita Karana dalam Hunian</h3>
+              <p>
+                Tiga penyebab kesejahteraan hidup terwujud nyata di pekarangan:
+                <strong>Parahyangan</strong> (hubungan spiritual, melalui area
+                suci Sanggah/Merajan), <strong>Pawongan</strong> (harmoni antar-penghuni
+                di bale dan natah), serta <strong>Palemahan</strong> (kelestarian
+                alam lewat ruang terbuka hijau dan teba).
+              </p>
+              <a class="citation" href="#ref-b01">[B-01]</a>
+              <a class="citation" href="#ref-b06">[B-06]</a>
+            </article>
+
+            <article class="edu-module-card">
+              <span class="edu-module-num">Modul 03</span>
+              <h3>Tri Angga pada Konstruksi Bale</h3>
+              <p>
+                Setiap unit bangunan dipandang hidup seperti manusia:
+                <strong>Utama Angga</strong> berupa atap ijuk/alang-alang yang
+                menaungi, <strong>Madya Angga</strong> berupa tiang kayu
+                (<em>saka</em>), dan <strong>Nista Angga</strong> berupa pondasi
+                <em>bebaturan</em>.
+              </p>
+              <a class="citation" href="#ref-b06">[B-06]</a>
+            </article>
+
+            <article class="edu-module-card">
+              <span class="edu-module-num">Modul 04</span>
+              <h3>Natah sebagai Jantung Pekarangan</h3>
+              <p>
+                Berbeda dengan rumah modern di bawah satu atap besar, rumah
+                tradisional Bali terdiri atas gugusan bale terpisah yang
+                mengelilingi <strong>Natah</strong> (pelataran terbuka di zona
+                Madya). Natah menghadirkan cahaya alami, sirkulasi udara silang,
+                dan panggung upacara adat.
+              </p>
+              <a class="citation" href="#ref-b01">[B-01]</a>
+              <a class="citation" href="#ref-b07">[B-07]</a>
+            </article>
+
+            <article class="edu-module-card">
+              <span class="edu-module-num">Modul 05</span>
+              <h3>Kelenturan Desa, Kala, Patra</h3>
+              <p>
+                Arsitektur tradisional Bali bukan cetakan kaku yang seragam.
+                Prinsip <strong>Desa</strong> (tempat), <strong>Kala</strong>
+                (waktu), dan <strong>Patra</strong> (kondisi setempat) membuat
+                orientasi Kaja–Kelod maupun susunan bale menyesuaikan topografi
+                desa, termasuk variasi antara Bali Dataran dan Bali Aga.
+              </p>
+              <a class="citation" href="#ref-b03">[B-03]</a>
+              <a class="citation" href="#ref-b04">[B-04]</a>
+            </article>
+
+            <article class="edu-module-card">
+              <span class="edu-module-num">Modul 06</span>
+              <h3>Sikut Satak &amp; Proporsi Manusia</h3>
+              <p>
+                Sikut Satak mengenal ukuran tubuh seperti <em>hasta, depa, musti,</em>
+                dan <em>tapak</em> sebagai acuan dalam pengukuran tradisional.
+              </p>
+              <a class="citation" href="#ref-b05">[B-05]</a>
+              <a class="citation" href="#ref-b07">[B-07]</a>
+            </article>
+          </div>
+        </div>
+
+        
+        
+      </section>
+
+      
+      
+      <section id="faq" class="section-shell faq-section" aria-labelledby="faq-title">
+        <div class="workflow-header reveal-up">
+          <div>
+            <h2 id="faq-title">Tanya jawab terkurasi arsitektur Bali.</h2>
+          </div>
+          <p>
+            Daftar 12 tanya jawab terkurasi mengenai kosmologi ruang, antropometri ukuran, dan filosofi konstruksi tradisional Bali berdasarkan rujukan resmi B-01 s.d. B-07.
+          </p>
+        </div>
+
+        <div class="faq-grid reveal-up">
+          <details class="faq-card">
+            <summary>Mengapa arah Kaja di Singaraja berbalik menghadap ke Selatan?</summary>
+            <p>
+              Dalam contoh Bali Utara, kaja mengarah ke pegunungan di selatan, sedangkan kelod mengarah ke laut di utara. Arah setempat perlu dibaca sesuai konteks lokasi.
+              <a class="citation" href="#ref-b03">[B-03]</a>
+              <a class="citation" href="#ref-b04">[B-04]</a>
+            </p>
+          </details>
+
+          <details class="faq-card">
+            <summary>Apa perbedaan antara Tri Mandala dan Sanga Mandala?</summary>
+            <p>
+              Tri Mandala membagi ruang ke dalam tiga tingkatan sakralitas: Utama (hulu/suci), Madya (tengah/aktivitas), dan Nista (hilir/pelayanan). Sanga Mandala adalah matriks sembilan zona yang tercipta saat konsep Tri Mandala dipertemukan secara bersilang dengan sumbu ritual (Kaja–Kelod) dan sumbu surya (Kangin–Kauh).
+              <a class="citation" href="#ref-b01">[B-01]</a>
+              <a class="citation" href="#ref-b06">[B-06]</a>
+            </p>
+          </details>
+
+          <details class="faq-card">
+            <summary>Mengapa Sanggah / Merajan keluarga ditempatkan di Kaja-Kangin?</summary>
+            <p>
+              Kaja-Kangin mempertemukan arah kaja dan kangin. Dalam salah satu contoh penataan pekarangan, tempat suci keluarga ditunjukkan pada bagian ini. Penempatan sesungguhnya mengikuti konteks dan aturan setempat.
+              <a class="citation" href="#ref-b01">[B-01]</a>
+              <a class="citation" href="#ref-b06">[B-06]</a>
+            </p>
+          </details>
+
+          <details class="faq-card">
+            <summary>Apa peran ruang terbuka Natah di tengah pekarangan?</summary>
+            <p>
+              Pada contoh ini, natah adalah ruang terbuka di tengah pekarangan yang menghubungkan bangunan-bangunan di sekitarnya.
+              <a class="citation" href="#ref-b01">[B-01]</a>
+              <a class="citation" href="#ref-b07">[B-07]</a>
+            </p>
+          </details>
+
+          <details class="faq-card">
+            <summary>Bagaimana cara mengukur satu Hasta pada tubuh manusia?</summary>
+            <p>
+              Satu hasta diukur dari lipatan siku hingga ujung jari tengah tangan yang direntangkan. Panjangnya berbeda untuk setiap orang.
+              <a class="citation" href="#ref-b05">[B-05]</a>
+              <a class="citation" href="#ref-b07">[B-07]</a>
+            </p>
+          </details>
+
+          <details class="faq-card">
+            <summary>Apa perbedaan fungsi satuan Hasta, Depa, dan Musti?</summary>
+            <p>
+              Hasta diukur dari siku ke ujung jari; depa dari rentangan kedua tangan; musti dari kepalan tangan dengan ibu jari tegak. Dalam salah satu sistem pengukuran, ketiganya digunakan bersama sebagai acuan ukuran.
+              <a class="citation" href="#ref-b05">[B-05]</a>
+              <a class="citation" href="#ref-b07">[B-07]</a>
+            </p>
+          </details>
+
+          <details class="faq-card">
+            <summary>Bagaimana konsep Tri Angga diwujudkan pada konstruksi Bale?</summary>
+            <p>
+              Tri Angga membaca bangunan seperti tubuh: atap sebagai bagian atas, tiang dan dinding sebagai badan, serta bebaturan sebagai bagian dasar.
+              <a class="citation" href="#ref-b06">[B-06]</a>
+            </p>
+          </details>
+
+          <details class="faq-card">
+            <summary>Apakah tata letak Sanga Mandala berlaku kaku dan mutlak di seluruh Bali?</summary>
+            <p>
+              Tidak. Penataan ruang perlu dibaca dengan mempertimbangkan tempat, waktu, dan keadaan setempat, yang dikenal sebagai <em>desa kala patra</em>.
+              <a class="citation" href="#ref-b01">[B-01]</a>
+              <a class="citation" href="#ref-b03">[B-03]</a>
+            </p>
+          </details>
+
+          <details class="faq-card">
+            <summary>Apakah semua Bale Daja memiliki bentuk yang sama?</summary>
+            <p>
+              Tidak. Kajian Bale Daja menemukan beberapa tipe dan perubahan fungsi, bukaan, serta material seiring waktu.
+              <a class="citation" href="#ref-b04">[B-04]</a>
+            </p>
+          </details>
+
+          <details class="faq-card">
+            <summary>Apa fungsi Bale Daja dalam pekarangan?</summary>
+            <p>
+              Kajian Bale Daja mencatat fungsi sebagai ruang tidur dan tempat menyimpan benda keluarga, serta perubahan fungsi pada perkembangannya.
+              <a class="citation" href="#ref-b04">[B-04]</a>
+            </p>
+          </details>
+
+          <details class="faq-card">
+            <summary>Apakah hasil kalkulator ukuran Hasta ini dapat dipakai langsung untuk konstruksi fisik?</summary>
+            <p>
+              Tidak. Perhitungan pada laboratorium Hasta adalah simulasi pembelajaran digital. Pembangunan fisik aktual memerlukan pengukuran langsung oleh undagi tradisional, penghitungan pengurip ritual, penyesuaian kontur tanah, serta standar rekayasa struktur tahan gempa.
+              <a class="citation" href="#ref-b05">[B-05]</a>
+              <a class="citation" href="#ref-b07">[B-07]</a>
+            </p>
+          </details>
+
+          <details class="faq-card">
+            <summary>Apakah ilustrasi ini menunjukkan struktur yang aman terhadap gempa?</summary>
+            <p>
+              Ilustrasi ini menjelaskan bagian bangunan, bukan kinerja strukturnya. Ketahanan bangunan terhadap gempa perlu dinilai oleh ahli berdasarkan desain, material, dan kondisi setempat.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      
+      <section
+        id="sumber"
+        class="section-shell sources-section"
+        aria-labelledby="source-title"
+      >
+        <div class="source-columns">
+          <div class="sources-sticky-copy reveal-up">
+            <h2 id="source-title">Bagaimana kami menyusun materi ini.</h2>
+            <p class="sources-intro">
+              Hasta merujuk pada publikasi resmi Pemerintah Provinsi Bali dan
+              jurnal akademik arsitektur. Contoh tata letak bangunan pada
+              denah 2D merujuk pada kajian arsitektur rumah tinggal Bali Madya
+              untuk keperluan edukasi visual.
+            </p>
+            <p class="section-note context-note">
+              Penerapan nyata perlu mempertimbangkan desa, kala, patra, aturan
+              setempat, serta bimbingan ahli atau undagi.
+            </p>
+            <p class="section-note context-note">
+              Ilustrasi di situs dibuat dengan AI sebagai pendamping pembelajaran, bukan dokumentasi lokasi tertentu.
+            </p>
+            <details>
+              <summary>Batas model pembelajaran Sanga Mandala</summary>
+              <p>
+                Kisi ini memilih satu pembacaan orientasi 3 × 3 dari
+                perpotongan sumbu kaja-kelod dan kangin-kauh beserta contoh
+                bangunan tipikal. Tidak semua rumah mempunyai susunan yang
+                sama. Tidak ada klaim lokasi tempat suci yang berlaku seragam
+                untuk seluruh desa, penghitungan pengurip, atau keluaran
+                konstruksi bangunan yang sah.
+              </p>
+            </details>
+          </div>
+
+          <ol class="reference-list reveal-up">
+            <li id="ref-b01">
+              <span>B-01 / Pemerintah Provinsi Bali</span>
+              <a
+                href="https://tarubali.baliprov.go.id/konsep-sanga-mandala-dalam-arsitektur-tradisional-bali/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Konsep Sanga Mandala dalam Arsitektur Tradisional Bali
+                <span aria-hidden="true">↗</span>
+              </a>
+              <p>
+                Taru Bali, 2024. Dasar konsep dua sumbu dan keragaman pola
+                penerapan.
+              </p>
+            </li>
+            <li id="ref-b02">
+              <span>B-02 / Pemerintah Provinsi Bali</span>
+              <a
+                href="https://tarubali.baliprov.go.id/arah-orientasi-ruang-wilayah/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Arah Orientasi Ruang Wilayah <span aria-hidden="true">↗</span>
+              </a>
+              <p>
+                Taru Bali. Pembacaan sumbu orientasi ruang wilayah di Bali.
+              </p>
+            </li>
+            <li id="ref-b03">
+              <span>B-03 / Pemerintah Provinsi Bali</span>
+              <a
+                href="https://tarubali.baliprov.go.id/kaja-kelod-antara-gunung-dan-laut-membaca-orientasi-gumi-bali/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Kaja-Kelod: Antara Gunung dan Laut, Membaca Orientasi Gumi
+                Bali
+                <span aria-hidden="true">↗</span>
+              </a>
+              <p>
+                Taru Bali, 2026. Orientasi gunung-laut dan konteks geografis
+                Bali Utara/Selatan.
+              </p>
+            </li>
+            <li id="ref-b04">
+              <span>B-04 / Universitas Kristen Petra · Contextual</span>
+              <a
+                href="https://dimensi.petra.ac.id/index.php/ars./article/view/16972"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Transformasi Arsitektur Bale Daja
+                <span aria-hidden="true">↗</span>
+              </a>
+              <p>
+                Saraswati, A. A. O., Dimensi, 2009. Konteks perbedaan
+                orientasi Bali Utara dan Bali Selatan.
+              </p>
+            </li>
+            <li id="ref-b05">
+              <span>B-05 / Universitas Udayana · Contextual</span>
+              <a
+                href="https://ejournal2.unud.ac.id/index.php/jsgs/en/article/view/2340"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Study of the Application of Asta Kosala Kosali and Sikut Satak
+                <span aria-hidden="true">↗</span>
+              </a>
+              <p>
+                Journal of A Sustainable Global South (JSGS), 2026. Konteks
+                antropometri tradisional.
+              </p>
+            </li>
+            <li id="ref-b06">
+              <span>B-06 / Jurnal Arcade</span>
+              <a
+                href="https://e-journal.ukri.ac.id/arcade/article/download/3841/980"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Identifikasi Perubahan Konsep Arsitektur Tradisional Bali pada Hasil Revitalisasi Pasar Seni Sukawati, Bali
+                <span aria-hidden="true">↗</span>
+              </a>
+              <p>Permana, Rachmawati &amp; Cahyadini, ARCADE, 2024. Pembahasan konsep zonasi dan Tri Angga, hlm. 140.</p>
+            </li>
+            <li id="ref-b07">
+              <span>B-07 / Institut Seni Indonesia Denpasar</span>
+              <a
+                href="https://jurnal.isi-dps.ac.id/index.php/mudra/article/download/1321/576/2715"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Ashta Bhumi, Panduan Pembuatan Lay Out Ruang Bangunan Hunian
+                Rumah Tinggal Tradisional Bali Madya
+                <span aria-hidden="true">↗</span>
+              </a>
+              <p>
+                Remawa &amp; Padmanaba, Mudra 36(1), 2021, hlm. 23–32.
+                Definisi satuan tubuh hasta, depa, musti dan tata letak bale.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    
+    <footer class="site-footer">
+      <div class="section-shell">
+        <div class="footer-top-cta">
+          <div>
+            <a class="footer-brand" href="./index.html">hasta</a>
+            <h2>Jelajahi arsitektur Bali bersama Hasta.</h2>
+          </div>
+          <div class="footer-cta-box">
+            <p>
+              Eksplorasi tata ruang pekarangan tradisional Bali, coba simulasi
+              ukuran hasta, dan pelajari modul edukasi arsitektur.
+            </p>
+            <div class="footer-tools-cluster">
+              <a href="./tata-ruang.html" class="footer-tool-btn primary">
+                Buka Tata Ruang ↗
+              </a>
+              <a href="./ukuran.html" class="footer-tool-btn secondary">
+                Buka Lab Ukuran ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-columns">
+          <div class="footer-col">
+            <h4>Halaman Utama</h4>
+            <a href="./index.html">Beranda</a>
+            <a href="./tata-ruang.html">Tata Ruang &amp; Peta Bali</a>
+            <a href="./ukuran.html">Ukuran Antropometrik Hasta</a>
+            <a href="./edukasi.html">Pakem Tri Angga &amp; Edukasi</a>
+          </div>
+          <div class="footer-col">
+            <h4>Konsep Budaya</h4>
+            <a href="./tata-ruang.html#ruang">Sanga Mandala 3 × 3</a>
+            <a href="./tata-ruang.html#ruang">Sumbu Kaja · Kelod</a>
+            <a href="./edukasi.html#tri-angga">Struktur 2D Tri Angga</a>
+            <a href="./ukuran.html#ukuran">Hasta · Depa · Musti</a>
+          </div>
+          <div class="footer-col">
+            <h4>Rujukan Resmi</h4>
+            <a href="./edukasi.html#ref-b01">B-01 · Portal Taru Bali</a>
+            <a href="./edukasi.html#ref-b03">B-03 · Orientasi Gumi Bali</a>
+            <a href="./edukasi.html#ref-b04">B-04 · Jurnal Dimensi Petra</a>
+            <a href="./edukasi.html#ref-b07">B-07 · Jurnal Mudra ISI</a>
+          </div>
+          <div class="footer-col">
+            <h4>Batas Simulasi</h4>
+            <span>Skema pembelajaran 2D</span>
+            <span>Bukan perangkat gambar kerja konstruksi</span>
+            <span>Tanpa penyimpanan data server</span>
+            <a href="#utama">Kembali ke atas ↑</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© 2026 Hasta. Menakar Ruang, Memahami Warisan.</span>
+          <span>Techtopia Vol. 2 · Tema Pusaka</span>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./scripts/main.js"></script>
+  </body>
+</html>

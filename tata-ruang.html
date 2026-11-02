@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#faf8f4" />
+    <meta
+      name="description"
+      content="Pelajari skema Sanga Mandala dan contoh orientasi kaja-kelod di Bali Utara dan Selatan."
+    />
+    <title>Tata Ruang &amp; Peta Bali | Hasta</title>
+    <link rel="icon" type="image/png" href="./assets/favicon.png" />
+
+    <link rel="stylesheet" href="./styles/tokens.css" />
+    <link rel="stylesheet" href="./styles/base.css" />
+    <link rel="stylesheet" href="./styles/components.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#utama">Lewati ke konten</a>
+
+    <div class="site-header-backdrop" aria-hidden="true"></div>
+
+    <header class="site-header" id="site-header">
+      <div class="header-inner">
+        <a class="wordmark" href="./index.html" aria-label="Hasta, beranda">hasta</a>
+
+        <nav id="navigation" aria-label="Navigasi utama">
+          <a href="./index.html">Beranda</a>
+          <a href="./tata-ruang.html" aria-current="page">Tata ruang</a>
+          <a href="./ukuran.html">Ukuran</a>
+          <a href="./edukasi.html">Edukasi</a>
+        </nav>
+
+        <div class="header-right">
+          <button
+            class="menu-button"
+            id="menu-button"
+            aria-expanded="false"
+            aria-controls="navigation"
+            hidden
+          >
+            Menu
+          </button>
+          <a class="button primary header-cta" href="./ukuran.html">
+            Simulasi ukuran <span aria-hidden="true">&#x2197;</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="utama">
+      
+      <section class="section-shell page-intro-header">
+        <div class="page-intro-content">
+          <h1>
+            <span>Sembilan zona,</span>
+            <span>orientasi Gumi Bali.</span>
+          </h1>
+          <p class="page-intro-lead">
+            Tata pekarangan tradisional Bali (Sanga Mandala) bertumpu pada perpotongan
+            sumbu ritual gunung&ndash;laut dan sumbu edaran matahari. Gunakan ilustrasi peta
+            di bawah untuk membaca arah Kaja, lalu amati perubahan posisi sembilan zona
+            pada denah interaktif.
+          </p>
+        </div>
+      </section>
+
+      
+      <section
+        id="ruang"
+        class="section-shell blueprint-section"
+        aria-labelledby="space-title"
+      >
+        <div class="studio-header reveal-up">
+          <div class="studio-title-wrap">
+            <h2 id="space-title">
+              Orientasi Kosmologis &amp; Denah Sanga Mandala
+            </h2>
+            <p class="studio-lead-text">
+              Dalam skema ini, <em>Kaja</em> mengarah ke gunung dan <em>Kelod</em> ke laut.
+              Pilih wilayah pada peta Pulau Bali di bawah untuk membandingkan sumbu Kaja&ndash;Kelod, lalu amati bagaimana sembilan zona pekarangan (Sanga Mandala)
+              dan wujud bangunannya langsung menyesuaikan diri.
+            </p>
+          </div>
+        </div>
+
+        <div class="blueprint-stage reveal-up">
+          <p
+            id="orientation-error"
+            class="error-message"
+            role="alert"
+            hidden
+          ></p>
+          
+            <figure class="bali-map-figure" id="bali-island-map" data-active-preset="south">
+              <div class="bali-map-container">
+                <img
+                  src="./assets/images/peta.webp"
+                  alt="Ilustrasi Pulau Bali dengan gambaran pegunungan di tengah"
+                  class="bali-relief-img"
+                  width="1408"
+                  height="768"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="bali-map-overlay">
+                  
+                  <button
+                    type="button"
+                    class="region-map-pin pin-north"
+                    data-preset="north"
+                    data-enhance hidden
+                    aria-pressed="false"
+                    aria-label="Pilih wilayah Bali Utara"
+                  >
+                    Bali Utara
+                  </button>
+
+                  
+                  <button
+                    type="button"
+                    class="region-map-pin pin-south"
+                    data-preset="south"
+                    data-enhance hidden
+                    aria-pressed="true"
+                    aria-label="Pilih wilayah Bali Selatan"
+                  >
+                    Bali Selatan
+                  </button>
+                </div>
+              </div>
+            </figure>
+            <p class="small">Ilustrasi peta untuk pembelajaran; bukan peta navigasi atau acuan topografi.</p>
+
+          <div class="workspace">
+            
+            <div class="blueprint-card">
+              <figure class="blueprint-board" id="diagram-view">
+                <svg
+                  id="blueprint"
+                  viewBox="0 0 480 510"
+                  role="group"
+                  aria-labelledby="blueprint-title blueprint-desc"
+                >
+                  <title id="blueprint-title">
+                    Sembilan zona pekarangan, preset Bali Selatan
+                  </title>
+                  <desc id="blueprint-desc">
+                    Utara geografis di atas dan timur di kanan. Setiap petak
+                    menampilkan denah 2D bangunan contoh dalam pekarangan Sanga
+                    Mandala.
+                  </desc>
+                  
+                  <g
+                    id="outer-wall"
+                    class="tembok-penyengker"
+                    role="presentation"
+                  >
+                    <rect
+                      class="wall-boundary"
+                      x="16"
+                      y="36"
+                      width="448"
+                      height="448"
+                      rx="12"
+                    />
+                    <rect
+                      class="wall-inner-line"
+                      x="24"
+                      y="44"
+                      width="432"
+                      height="432"
+                      rx="8"
+                    />
+                    <text
+                      id="blueprint-axis-top"
+                      class="wall-axis-label wall-axis-top"
+                      x="240"
+                      y="26"
+                      text-anchor="middle"
+                    >
+                      &uarr; Utara &middot; KAJA (Arah Gunung)
+                    </text>
+                    <text
+                      id="blueprint-axis-bottom"
+                      class="wall-axis-label wall-axis-bottom"
+                      x="240"
+                      y="500"
+                      text-anchor="middle"
+                    >
+                      &darr; Selatan &middot; KELOD (Arah Laut)
+                    </text>
+                  </g>
+                  <g id="static-grid" class="compass-lines">
+                    <path
+                      d="M30 50H450V470H30Z M170 50V470 M310 50V470 M30 190H450 M30 330H450"
+                    />
+                  </g>
+                  <g
+                    id="zone-layer"
+                    class="fallback-labels"
+                    text-anchor="middle"
+                  >
+                    <text x="100" y="125">Kaja-Kauh</text>
+                    <text x="240" y="125">Kaja</text>
+                    <text x="380" y="125">Kaja-Kangin</text>
+                    <text x="100" y="265">Kauh</text>
+                    <text x="240" y="265">Madya</text>
+                    <text x="380" y="265">Kangin</text>
+                    <text x="100" y="405">Kelod-Kauh</text>
+                    <text x="240" y="405">Kelod</text>
+                    <text x="380" y="405">Kelod-Kangin</text>
+                  </g>
+                </svg>
+              </figure>
+
+              <div class="blueprint-card-footer" data-enhance hidden>
+                <span class="blueprint-hint">Pilih zona untuk membaca contoh dan sumbernya.</span>
+              </div>
+              <details class="zone-list-panel" data-enhance hidden>
+                <summary>Lihat sembilan zona sebagai daftar</summary>
+                <div id="zone-list-controls" class="zone-list-controls" aria-label="Daftar zona" role="group"></div>
+              </details>
+            </div>
+
+            
+            <aside
+              class="zone-detail detail-card"
+              id="zone-detail"
+              aria-labelledby="detail-title"
+            >
+              <div class="zone-detail-header">
+                <span
+                  class="detail-badge"
+                  id="detail-number"
+                >Zona 05 &middot; Pusat Orientasi (Natah)</span>
+                <h3 id="detail-title" class="detail-heading">Madya</h3>
+                <p class="detail-building-name" id="detail-building-name">
+                  Natah (Ruang Terbuka)
+                </p>
+              </div>
+
+              <div class="detail-illustration-plate">
+                <img
+                  id="detail-zone-plate"
+                  src="./assets/images/arah/madya.webp"
+                  alt="Ilustrasi contoh zona Madya sebagai ruang terbuka"
+                  class="detail-zone-img"
+                  width="640"
+                  height="640"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <p class="detail-plate-caption" id="detail-plate-caption">
+                  Wujud Arsitektural: Natah (Ruang Terbuka)
+                </p>
+              </div>
+
+              <div class="detail-body-content">
+                <p class="small">Contoh susunan pekarangan Bali Madya. Praktik setempat dapat berbeda.</p>
+                <p id="detail-sources" class="small"></p>
+                <p id="detail-description" class="detail-description">
+                  Titik pusat pekarangan berupa ruang terbuka (Natah) yang menyatukan orientasi seluruh bale, sirkulasi udara, dan pelaksanaan upacara.
+                </p>
+
+              </div>
+            </aside>
+          </div>
+        </div>
+        <p
+          class="sr-only"
+          id="zone-announcement"
+          aria-live="polite"
+          aria-atomic="true"
+        ></p>
+        <noscript>
+          <div class="context-note">
+            <h3>Sembilan arah dalam skema Bali Selatan</h3>
+            <p>Kaja mengarah ke gunung dan kelod ke laut. Pada contoh Bali Utara, arah kaja dan kelod pada diagram berbalik. Praktik setempat dapat berbeda.</p>
+            <ul>
+              <li>Kaja-Kauh: pertemuan kaja dan barat.</li>
+              <li>Kaja: sisi ke arah gunung.</li>
+              <li>Kaja-Kangin: pertemuan kaja dan timur.</li>
+              <li>Kauh: sisi barat.</li>
+              <li>Madya: bagian tengah.</li>
+              <li>Kangin: sisi timur.</li>
+              <li>Kelod-Kauh: pertemuan kelod dan barat.</li>
+              <li>Kelod: sisi ke arah laut.</li>
+              <li>Kelod-Kangin: pertemuan kelod dan timur.</li>
+            </ul>
+            <p><a class="citation" href="./edukasi.html#ref-b01">Sumber Sanga Mandala</a></p>
+          </div>
+        </noscript>
+      </section>
+    
+    </main>
+
+    
+    <footer class="site-footer">
+      <div class="section-shell">
+        <div class="footer-top-cta">
+          <div>
+            <a class="footer-brand" href="./index.html">hasta</a>
+            <h2>Jelajahi arsitektur Bali bersama Hasta.</h2>
+          </div>
+          <div class="footer-cta-box">
+            <p>
+              Eksplorasi tata ruang pekarangan tradisional Bali, coba simulasi
+              ukuran hasta, dan pelajari modul edukasi arsitektur.
+            </p>
+            <div class="footer-tools-cluster">
+              <a href="./ukuran.html" class="footer-tool-btn primary">
+                Simulasi Ukuran Hasta ↗
+              </a>
+              <a href="./edukasi.html" class="footer-tool-btn secondary">
+                Pakem Tri Angga ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-columns">
+          <div class="footer-col">
+            <h4>Halaman Utama</h4>
+            <a href="./index.html">Beranda</a>
+            <a href="./tata-ruang.html">Tata Ruang &amp; Peta Bali</a>
+            <a href="./ukuran.html">Ukuran Antropometrik Hasta</a>
+            <a href="./edukasi.html">Pakem Tri Angga &amp; Edukasi</a>
+          </div>
+          <div class="footer-col">
+            <h4>Konsep Budaya</h4>
+            <a href="./tata-ruang.html#ruang">Sanga Mandala 3 × 3</a>
+            <a href="./tata-ruang.html#ruang">Sumbu Kaja · Kelod</a>
+            <a href="./edukasi.html#tri-angga">Struktur 2D Tri Angga</a>
+            <a href="./ukuran.html#ukuran">Hasta · Depa · Musti</a>
+          </div>
+          <div class="footer-col">
+            <h4>Rujukan Resmi</h4>
+            <a href="./edukasi.html#ref-b01">B-01 · Portal Taru Bali</a>
+            <a href="./edukasi.html#ref-b03">B-03 · Orientasi Gumi Bali</a>
+            <a href="./edukasi.html#ref-b04">B-04 · Jurnal Dimensi Petra</a>
+            <a href="./edukasi.html#ref-b07">B-07 · Jurnal Mudra ISI</a>
+          </div>
+          <div class="footer-col">
+            <h4>Batas Simulasi</h4>
+            <span>Skema pembelajaran 2D</span>
+            <span>Bukan perangkat gambar kerja konstruksi</span>
+            <span>Tanpa penyimpanan data server</span>
+            <a href="#utama">Kembali ke atas ↑</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© 2026 Hasta. Menakar Ruang, Memahami Warisan.</span>
+          <span>Techtopia Vol. 2 · Tema Pusaka</span>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./scripts/main.js"></script>
+  </body>
+</html>

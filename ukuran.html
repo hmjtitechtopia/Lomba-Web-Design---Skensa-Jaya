@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#faf8f4" />
+    <meta
+      name="description"
+      content="Laboratorium Ukuran Hasta: simulasikan ukuran antropometri tradisional Bali berbasis proporsi tubuh manusia dan amati tampak 2D Bale dinamis."
+    />
+    <title>Ukuran &amp; Antropometri Hasta | Hasta</title>
+    <link rel="icon" type="image/png" href="./assets/favicon.png" />
+
+    <link rel="stylesheet" href="./styles/tokens.css" />
+    <link rel="stylesheet" href="./styles/base.css" />
+    <link rel="stylesheet" href="./styles/components.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#utama">Lewati ke konten</a>
+
+    <div class="site-header-backdrop" aria-hidden="true"></div>
+
+    <header class="site-header" id="site-header">
+      <div class="header-inner">
+        <a class="wordmark" href="./index.html" aria-label="Hasta, beranda">hasta</a>
+
+        <nav id="navigation" aria-label="Navigasi utama">
+          <a href="./index.html">Beranda</a>
+          <a href="./tata-ruang.html">Tata ruang</a>
+          <a href="./ukuran.html" aria-current="page">Ukuran</a>
+          <a href="./edukasi.html">Edukasi</a>
+        </nav>
+
+        <div class="header-right">
+          <button
+            class="menu-button"
+            id="menu-button"
+            aria-expanded="false"
+            aria-controls="navigation"
+            hidden
+          >
+            Menu
+          </button>
+          <a class="button primary header-cta" href="./edukasi.html">
+            Pakem &amp; Edukasi <span aria-hidden="true">&#x2197;</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="utama">
+      
+      <section class="section-shell page-intro-header">
+        <div class="page-intro-content">
+          <h1>
+            <span>Ukuran yang berangkat</span>
+            <span>dari tubuh manusia.</span>
+          </h1>
+          <p class="page-intro-lead">
+            Dalam arsitektur tradisional Bali (<em>Asta Kosala Kosali</em>),
+            ukuran tidak dibakukan dalam sentimeter pabrikan, melainkan
+            diambil langsung dari proporsi fisik pemilik rumah agar tercipta
+            hubungan harmonis antara manusia dan ruang yang dihuninya.
+          </p>
+        </div>
+      </section>
+
+      
+      <div id="ukuran" class="measurement-surface">
+        <section
+          id="lab-hasta"
+          class="section-shell measurement-section"
+          aria-labelledby="measure-title"
+        >
+          <div class="measure-split">
+            <div class="measure-vitrine reveal-up">
+              <div class="measure-explainer">
+                <figure class="hasta-photo-frame">
+                  <img
+                    src="./assets/images/ukur-hasta.webp"
+                    alt="Ilustrasi pengerjaan kayu dengan tangan"
+                    width="640"
+                    height="400"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </figure>
+                <div>
+                  <p class="measurement-intro">
+                    Dalam kajian arsitektur Bali Madya, <strong>satu hasta</strong>
+                    diukur dari lipatan siku hingga ujung jari tangan tengah yang
+                    direntangkan lurus.
+                    <a class="citation" href="./edukasi.html#ref-b07">[B-07]</a>
+                  </p>
+                  <p class="measurement-privacy small">
+                    Contoh awal 45 cm merupakan angka ilustratif. Simulasi
+                    berjalan langsung di perambanmu tanpa pengiriman data ke server.
+                  </p>
+                </div>
+              </div>
+
+              <div class="measure-lab" id="measure-lab" data-enhance hidden>
+                <form id="measure-form" novalidate>
+                  <div class="measure-inputs">
+                    <div>
+                      <label for="hasta-input">Panjang hasta pribadimu</label>
+                      <div class="unit-input">
+                        <input
+                          id="hasta-input"
+                          name="hasta"
+                          type="text"
+                          inputmode="decimal"
+                          value="45"
+                          aria-describedby="hasta-help hasta-error"
+                        />
+                        <span>cm</span>
+                      </div>
+                      <p id="hasta-help" class="input-help">
+                        15–80 cm · batas input simulasi
+                      </p>
+                      <p id="hasta-error" class="error-message" hidden></p>
+                    </div>
+                    <div>
+                      <label for="multiplier-input">Jumlah pengali hasta</label>
+                      <div class="stepper">
+                        <button
+                          type="button"
+                          id="subtract"
+                          aria-label="Kurangi jumlah hasta"
+                        >
+                          −
+                        </button>
+                        <input
+                          id="multiplier-input"
+                          name="multiplier"
+                          type="text"
+                          inputmode="numeric"
+                          value="3"
+                          aria-describedby="multiplier-help multiplier-error"
+                        />
+                        <button
+                          type="button"
+                          id="add"
+                          aria-label="Tambah jumlah hasta"
+                        >
+                          +
+                        </button>
+                      </div>
+                      <p id="multiplier-help" class="input-help">
+                        Bilangan bulat 1–10
+                      </p>
+                      <p id="multiplier-error" class="error-message" hidden></p>
+                    </div>
+                  </div>
+                </form>
+
+                <div
+                  class="calculation-card"
+                  aria-live="polite"
+                  aria-atomic="true"
+                >
+                  <div>
+                    <span class="small">Perhitungan proporsi ilustratif</span>
+                    <p class="measurement-equation" id="equation">
+                      3 × 45 cm
+                    </p>
+                    <p id="result-invalid" class="small" hidden>
+                      Lengkapi ukuran yang valid untuk melihat hasil.
+                    </p>
+                  </div>
+                  <p id="measure-result" class="measure-result">
+                    135 <span>cm</span>
+                  </p>
+                </div>
+
+                                
+                                <figure class="bale-measure-figure">
+                  <div class="bale-measure-caption">
+                    <strong>Ilustrasi tampak depan Bale Bali</strong>
+                    <span>Garis menunjukkan hasil pada skala ilustratif 0–800 cm.</span>
+                  </div>
+                  <div class="bale-elevation-stage">
+                    <img
+                      src="./assets/images/bale-tampak-depan.webp"
+                      alt="Ilustrasi tampak depan bangunan tradisional Bali"
+                      class="bale-elevation-img"
+                      width="800"
+                      height="460"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                    
+                    <svg
+                      class="bale-dim-overlay-svg"
+                      viewBox="0 0 500 70"
+                      role="img"
+                      aria-label="Garis dimensi proporsional dinamis"
+                    >
+                      <line x1="84" y1="20" x2="84" y2="44" stroke="#9e4228" stroke-width="1.8" />
+                      <line
+                        id="bale-dim-right-tick"
+                        x1="134"
+                        y1="20"
+                        x2="134"
+                        y2="44"
+                        stroke="#9e4228"
+                        stroke-width="1.8"
+                      />
+                      <path
+                        id="bale-dim-line"
+                        d="M 84,32 L 134,32"
+                        stroke="#9e4228"
+                        stroke-width="2.2"
+                      />
+                      <text
+                        id="bale-dim-label"
+                        x="109"
+                        y="58"
+                        text-anchor="middle"
+                        font-size="12"
+                        font-weight="700"
+                        fill="#9e4228"
+                      >
+                        135 cm (3 hasta)
+                      </text>
+                    </svg>
+                  </div>
+                </figure>
+
+                
+                <svg
+                  class="measure-scale"
+                  viewBox="0 0 500 92"
+                  role="img"
+                  aria-labelledby="scale-title"
+                >
+                  <title id="scale-title">
+                    Panjang ilustratif 135 cm pada skala 0 sampai 800 cm
+                  </title>
+                  <path
+                    d="M20 45H480 M20 38V52 M135 38V52 M250 38V52 M365 38V52 M480 38V52"
+                    stroke="currentColor"
+                    fill="none"
+                  />
+                  <path
+                    id="result-line"
+                    d="M20 30H97.625"
+                    stroke="currentColor"
+                    stroke-width="8"
+                  />
+                  <g font-size="13" fill="currentColor">
+                    <text x="20" y="74">0</text>
+                    <text x="135" y="74" text-anchor="middle">200</text>
+                    <text x="250" y="74" text-anchor="middle">400</text>
+                    <text x="365" y="74" text-anchor="middle">600</text>
+                    <text x="480" y="74" text-anchor="end">800 cm</text>
+                  </g>
+                </svg>
+
+                <p class="small">
+                  Perhitungan ini adalah simulasi edukasi perkalian ukuran
+                  pribadi, bukan ketetapan konstruksi fisik maupun penghitungan
+                  <em>pengurip</em> ritual.
+                </p>
+              </div>
+
+              <noscript>
+                <p class="measurement-fallback context-note">
+                  Contoh perhitungan: 3 × 45 cm = 135 cm. Aktifkan
+                  JavaScript untuk mencoba nilai sendiri.
+                </p>
+              </noscript>
+            </div>
+
+            
+            <div class="feature-left-copy reveal-up">
+              <h2 id="measure-title">Sistem sikut antropometrik.</h2>
+              <p>
+                Kajian <em>Asta Kosala Kosali</em> dan <em>Asta Bumi</em>
+                mengatur agar bentang ruang, jarak antar-bale, hingga tinggi
+                lantai diukur berdasar anatomi penghuni rumah.
+                <a class="citation" href="./edukasi.html#ref-b05">[B-05]</a>
+                <a class="citation" href="./edukasi.html#ref-b07">[B-07]</a>
+              </p>
+
+              <div class="editorial-point-list">
+                <div class="editorial-point-item">
+                  <span class="point-num">01</span>
+                  <div>
+                    <h3>Hasta (Siku ke Ujung Jari Tengah)</h3>
+                    <p>
+                      Satuan ukuran dari lipatan siku hingga ujung jari tengah
+                      tangan yang direntangkan lurus. Ukuran ini berbeda pada
+                      setiap orang.
+                    </p>
+                  </div>
+                </div>
+                <div class="editorial-point-item">
+                  <span class="point-num">02</span>
+                  <div>
+                    <h3>Depa (Rentang Kedua Tangan)</h3>
+                    <p>
+                      Rentang dari ujung jari tangan kiri hingga ujung jari
+                      tangan kanan. Depa memiliki beberapa variasi pengukuran.
+                    </p>
+                  </div>
+                </div>
+                <div class="editorial-point-item">
+                  <span class="point-num">03</span>
+                  <div>
+                    <h3>Musti (Kepalan Ibu Jari Tegak)</h3>
+                    <p>
+                      Ukuran kepalan tangan dengan posisi ibu jari didirikan
+                      tegak. Dalam contoh pengukuran tradisional, musti dapat
+                      digunakan sebagai tambahan ukuran (<em>pengurip</em>).
+                    </p>
+                  </div>
+                </div>
+                <div class="editorial-point-item">
+                  <span class="point-num">04</span>
+                  <div>
+                    <h3>Tapak &amp; Nyari</h3>
+                    <p>
+                      Panjang telapak kaki (tapak) dan tebal jari tangan (nyari)
+                      sebagai satuan pelengkap dalam penyusunan undag tangga dan
+                      ornamen ukiran padas.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell">
+        <div class="footer-top-cta">
+          <div>
+            <a class="footer-brand" href="./index.html">hasta</a>
+            <h2>Jelajahi arsitektur Bali bersama Hasta.</h2>
+          </div>
+          <div class="footer-cta-box">
+            <p>
+              Eksplorasi tata ruang pekarangan tradisional Bali, coba simulasi
+              ukuran hasta, dan pelajari modul edukasi arsitektur.
+            </p>
+            <div class="footer-tools-cluster">
+              <a href="./tata-ruang.html" class="footer-tool-btn primary">
+                Buka Tata Ruang ↗
+              </a>
+              <a href="./ukuran.html" class="footer-tool-btn secondary">
+                Buka Lab Ukuran ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-columns">
+          <div class="footer-col">
+            <h4>Halaman Utama</h4>
+            <a href="./index.html">Beranda</a>
+            <a href="./tata-ruang.html">Tata Ruang &amp; Peta Bali</a>
+            <a href="./ukuran.html">Ukuran Antropometrik Hasta</a>
+            <a href="./edukasi.html">Pakem Tri Angga &amp; Edukasi</a>
+          </div>
+          <div class="footer-col">
+            <h4>Konsep Budaya</h4>
+            <a href="./tata-ruang.html#ruang">Sanga Mandala 3 × 3</a>
+            <a href="./tata-ruang.html#ruang">Sumbu Kaja · Kelod</a>
+            <a href="./edukasi.html#tri-angga">Struktur 2D Tri Angga</a>
+            <a href="./ukuran.html#ukuran">Hasta · Depa · Musti</a>
+          </div>
+          <div class="footer-col">
+            <h4>Rujukan Resmi</h4>
+            <a href="./edukasi.html#ref-b01">B-01 · Portal Taru Bali</a>
+            <a href="./edukasi.html#ref-b03">B-03 · Orientasi Gumi Bali</a>
+            <a href="./edukasi.html#ref-b04">B-04 · Jurnal Dimensi Petra</a>
+            <a href="./edukasi.html#ref-b07">B-07 · Jurnal Mudra ISI</a>
+          </div>
+          <div class="footer-col">
+            <h4>Batas Simulasi</h4>
+            <span>Skema pembelajaran 2D</span>
+            <span>Bukan perangkat gambar kerja konstruksi</span>
+            <span>Tanpa penyimpanan data server</span>
+            <a href="#utama">Kembali ke atas ↑</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© 2026 Hasta. Menakar Ruang, Memahami Warisan.</span>
+          <span>Techtopia Vol. 2 · Tema Pusaka</span>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./scripts/main.js"></script>
+  </body>
+</html>
